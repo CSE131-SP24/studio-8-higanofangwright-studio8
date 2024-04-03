@@ -23,6 +23,11 @@ public class Question {
 		}
 	}
 	
+	
+	public String getPrompt() {
+		return prompt;
+	}
+
 	public int getPoints() {
 		return this.points;
 	}
