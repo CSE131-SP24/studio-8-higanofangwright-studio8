@@ -26,7 +26,6 @@ public class Quiz {
 	}
 	
 	public void takeQuiz() {
-		//FIXME
 		int pointsTotal = 0;
 		for(Question q : questions) {
 			q.displayPrompt();
@@ -50,7 +49,11 @@ public class Quiz {
 		choices = new String[] {"Manchester City", "Arsenal", "Manchester United", "Liverpool"};
 		Question premLeague = new MultipleChoiceQuestion("Which team won the Premier League last season?", "1", 69, choices);
 		
-		Question[] questions = {q, multipleChoice, selectAll, premLeague}; //create and add more questions!
+		
+		choices = new String[] {"Joao Klauss", "Chicho Arango", "Jared Stroud", "Eduard Lowen"};
+		Question stlCITY = new SelectAllQuestion("Which players play for STL CITY SC?", "14", choices);
+		
+		Question[] questions = {q, multipleChoice, selectAll, premLeague, stlCITY}; //create and add more questions!
 		
 		Quiz studio8quiz = new Quiz(questions);
 		studio8quiz.takeQuiz();
